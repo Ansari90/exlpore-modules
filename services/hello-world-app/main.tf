@@ -6,16 +6,6 @@ data "aws_subnet_ids" "default" {
   vpc_id = data.aws_vpc.default.id
 }
 
-data "terraform_remote_state" "exploreDB" {
-  backend = "s3"
-
-  config = {
-    bucket = "a3-explore-terraform-state"
-    key = var.db_remote_state_bucket_key
-    region = "us-east-2"
-  }
-}
-
 data "template_file" "user_data" {
   template = file("${path.module}/user-data.sh")
 

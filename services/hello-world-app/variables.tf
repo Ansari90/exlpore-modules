@@ -1,8 +1,3 @@
-variable "db_remote_state_bucket_key" {
-  description = "S3 bucket key to retrieve state for environment"
-  type = string
-}
-
 variable "environment" {
   description = "Name of the environment being deployed to"
   type = string
