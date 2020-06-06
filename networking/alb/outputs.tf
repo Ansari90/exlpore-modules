@@ -1,5 +1,5 @@
 output "alb_dns_name" {
-  value = aws_lb.terraform_asg_lb.name
+  value = aws_lb.terraform_asg_lb.dns_name
   description = "Load Balancer Domain Name"
 }
 
