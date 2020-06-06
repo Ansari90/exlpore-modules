@@ -27,7 +27,7 @@ resource "aws_autoscaling_group" "terraform_autoscaling_group" {
   launch_configuration = aws_launch_configuration.terraform_server_launch_config.name
   vpc_zone_identifier = var.subnet_ids
 
-  target_group_arns = [var.target_group_arns]
+  target_group_arns = var.target_group_arns
   health_check_type = var.health_check_type
 
   min_size = var.min_size
