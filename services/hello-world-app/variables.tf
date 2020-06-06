@@ -41,6 +41,16 @@ variable "server_port" {
   default = 8080
 }
 
+variable "db_address" {
+  description = "Connect to Explore MySQL DB at this endpoint"
+  type = string
+}
+
+variable "db_port" {
+  description = "The port Explore MySQL DB will be listening on"
+  type = number
+}
+
 variable "custom_tags" {
   description = "Custom Tags to attach to the ASG"
   type = map(string)

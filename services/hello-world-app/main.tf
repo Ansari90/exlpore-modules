@@ -21,8 +21,8 @@ data "template_file" "user_data" {
 
   vars = {
     server_port = var.server_port
-    db_address = data.terraform_remote_state.exploreDB.outputs.address
-    db_port = data.terraform_remote_state.exploreDB.outputs.port
+    db_address = var.db_address
+    db_port = var.db_port
   }
 }
 
